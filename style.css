@@ -199,3 +199,26 @@ form button {
 form button:hover {
   background-color: #256b45;
 }
+/* LABORATORIO 7*/
+#lab7-contact { max-width: 640px; margin: 20px auto; padding: 12px; box-sizing: border-box; }
+#lab7-contact fieldset { border: 1px solid #d0d0d0; padding: 10px 12px; border-radius: 6px; margin-bottom: 12px; }
+#lab7-contact legend { font-weight: 600; padding: 0 6px; }
+#lab7-contact label { display: block; margin-top: 8px; font-size: 14px; color: #222; }
+#lab7-contact input[type="text"],
+#lab7-contact input[type="email"],
+#lab7-contact textarea,
+#lab7-contact select {
+  width: 100%;
+  padding: 7px;
+  margin-top: 6px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+.form-actions { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; margin-top: 10px; }
+.form-actions .terms { display: flex; align-items: center; gap: 6px; }
+.buttons { display: flex; gap: 8px; }
+.btn-secondary { background-color: #777; color: #fff; border-radius: 6px; padding: 8px 12px; border: none; cursor: pointer; }
+.confirm { color: #1a8a00; font-weight: 600; text-align: center; margin-top: 10px; }

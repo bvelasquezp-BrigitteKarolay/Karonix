@@ -73,35 +73,63 @@
   </main>
 
 <!-- LABORATORIO 6 -->
-<section>
-  <h2>Formulario de Contacto</h2>
-  <form action="#" method="post">
+<!-- LABORATORIO 7 -->
+ 
+<section id="lab7-contact" class="card section-contact">
+  <h2>Contacto KARONIX</h2>
 
-    <label for="nombre">Nombre completo:</label><br>
-    <input type="text" id="nombre" name="nombre" required><br><br>
+  <form id="formKaronix" action="#" method="post" novalidate>
+    <fieldset>
+      <legend>Datos personales</legend>
 
-    <label for="correo">Correo electrónico:</label><br>
-    <input type="email" id="correo" name="correo" required><br><br>
+      <label for="nombre">Nombre completo</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Ej. Nombre Apellido" required minlength="3">
 
-    <label for="mensaje">Mensaje:</label><br>
-    <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br><br>
+      <label for="correo">Correo electrónico</label>
+      <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+    </fieldset>
 
-    <label for="opcion">Selecciona una opción:</label><br>
-    <select id="opcion" name="opcion">
-      <option value="consulta">Consulta</option>
-      <option value="sugerencia">Sugerencia</option>
-      <option value="otro">Otro</option>
-    </select><br><br>
+    <fieldset>
+      <legend>Mensaje</legend>
 
-    <input type="checkbox" id="terminos" name="terminos" required>
-    <label for="terminos">Acepto los términos y condiciones</label><br><br>
+      <label for="mensaje">Mensaje</label>
+      <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje..." required minlength="5"></textarea>
 
-    <button type="submit">Enviar</button>
+      <label for="opcion">Tipo</label>
+      <select id="opcion" name="opcion">
+        <option value="consulta">Consulta</option>
+        <option value="sugerencia">Sugerencia</option>
+        <option value="otro">Otro</option>
+      </select>
+    </fieldset>
+
+    <div class="form-actions">
+      <div class="terms">
+        <input type="checkbox" id="terminos" name="terminos" required>
+        <label for="terminos">Acepto los términos y condiciones</label>
+      </div>
+
+      <div class="buttons">
+        <button type="submit" class="btn">Enviar</button>
+        <button type="reset" class="btn btn-secondary">Limpiar</button>
+      </div>
+    </div>
   </form>
+
+  <p id="mensajeConfirmacion" class="confirm" hidden>Gracias, tu mensaje fue recibido. Te responderemos pronto.</p>
 </section>
 
-  <footer class="footer">
-    <p>© 2025 KARONIX • Todos los derechos reservados</p>
-  </footer>
-</body>
-</html>
+<script>
+document.getElementById('formKaronix').addEventListener('submit', function(e){
+  e.preventDefault();
+  if(!this.checkValidity()){
+    this.reportValidity();
+    return;
+  }
+  document.getElementById('mensajeConfirmacion').hidden = false;
+  setTimeout(()=> {
+    document.getElementById('mensajeConfirmacion').hidden = true;
+    this.reset();
+  }, 2200);
+});
+</script>
