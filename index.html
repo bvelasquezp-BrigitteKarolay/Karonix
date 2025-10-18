@@ -1,22 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KARONIX – Creatividad & Tecnología </title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KARONIX – Creatividad & Tecnología</title>
+
+  <!-- FUENTES Y ICONOS -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <div class="overlay-bg"></div>
 
+  <!-- HERO -->
   <header class="hero">
-    <div class="header-inner">
-      <img src="https://scontent.faqp3-1.fna.fbcdn.net/v/t39.30808-6/532180745_122093590868987623_3217654287245798058_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=A2MAl4JIfkoQ7kNvwFG3Nsg&_nc_oc=AdktXMatFKARXseYgKQmzBDfByJFy2Tc1JSWeELfg5XzugBRbjNhpl2ycavsupemqUf4vEAEUQnt57X4Syjwc0ML&_nc_zt=23&_nc_ht=scontent.faqp3-1.fna&_nc_gid=Zl1wB3MDtgqqfY93rxPohQ&oh=00_AfZBABZ2Tk0PO2FIKlAyQddek1PJSLCJ_bqzrxSC8S7jDg&oe=68E32BA2" alt="Logo KARONIX" class="logo">
+    <div class="hero-left">
+      <img src="https://raw.githubusercontent.com/bvelasquezp-BrigitteKarolay/Karonix/main/KARONIX.png" alt="Logo KARONIX" class="logo">
+    </div>
+
+    <div class="hero-right">
       <h1 class="brand-name">KARONIX</h1>
       <p class="slogan">Creatividad & Tecnología</p>
+      <p class="intro">Diseñamos experiencias visuales únicas para potenciar tu marca.</p>
+      <a href="#contact" class="btn-primary">Contáctanos</a>
     </div>
   </header>
 
+  <!-- NAVEGACION -->
   <nav class="nav-main">
     <ul>
       <li><a href="#about">Nosotros</a></li>
@@ -26,110 +38,118 @@
     </ul>
   </nav>
 
+  <!-- SOBRE NOSOTROS -->
   <main>
     <section id="about" class="card section-about">
-      <h2>Sobre KARONIX</h2>
-      <p>
-        En Karonix ayudamos a estudiantes, emprendedores y negocios a tener una presencia digital y profesional con diseños accesibles, personalizados y de calidad.
-      </p>
+      <h2>Sobre Nosotros</h2>
+      <div class="about-grid">
+        <p>
+          En <strong>KARONIX</strong> somos un estudio de diseño digital enfocado en la innovación y la estética. 
+          Nos apasiona crear experiencias que inspiren, comuniquen y conecten con el público. 
+          Combinamos tecnología, arte y estrategia para ofrecer soluciones creativas de alto impacto visual.
+        </p>
+        <p>
+          Creemos que una buena identidad visual puede transformar una marca. 
+          Por eso, desarrollamos cada proyecto con detalle, profesionalismo y dedicación.
+        </p>
+      </div>
     </section>
 
+    <!-- SERVICIOS -->
     <section id="services" class="card section-services">
       <h2>Servicios que ofrecemos</h2>
       <div class="service-list">
         <div class="service-item">
-          <h3>Diseño de logotipos</h3>
-          <p>Creación de identidades visuales únicas que representan la esencia de tu marca.</p>
+          <i class="fa-solid fa-pen-nib"></i>
+          <h3>Diseño de Logotipos</h3>
+          <p>Identidades visuales únicas que reflejan la esencia de tu marca y la hacen destacar.</p>
         </div>
         <div class="service-item">
-          <h3>Diseño para redes sociales</h3>
-          <p>Imágenes, banners, publicaciones visuales con estilo coherente y elegante.</p>
+          <i class="fa-solid fa-brush"></i>
+          <h3>Diseño para Redes Sociales</h3>
+          <p>Contenido visual estratégico, coherente y estéticamente atractivo para tus plataformas digitales.</p>
         </div>
         <div class="service-item">
-          <h3>Publicidad digital</h3>
-          <p>Diseño de banners, anuncios y piezas gráficas optimizadas para campañas.</p>
+          <i class="fa-solid fa-bullhorn"></i>
+          <h3>Publicidad Digital</h3>
+          <p>Diseños publicitarios impactantes para atraer y fidelizar a tus clientes en redes sociales.</p>
         </div>
         <div class="service-item">
-          <h3>Edición creativa</h3>
-          <p>Manipulación de imágenes, retoques.</p>
+          <i class="fa-solid fa-photo-film"></i>
+          <h3>Edición y Retoque</h3>
+          <p>Fotografía, manipulación y edición profesional para lograr resultados visuales de alta calidad.</p>
+        </div>
+        <div class="service-item">
+          <i class="fa-solid fa-laptop-code"></i>
+          <h3>Diseño Web</h3>
+          <p>Desarrollo de sitios web modernos, optimizados y adaptados a cualquier dispositivo.</p>
         </div>
       </div>
     </section>
 
+    <!-- PORTAFOLIO -->
     <section id="portfolio" class="card section-portfolio">
-      <h2>Portafolio de muestras</h2>
-      <p>Aún en construcción — próximamente verás aquí ejemplos de nuestros diseños creativos.</p>
-    
+      <h2>Portafolio de Muestras</h2>
+      <div class="portfolio-grid">
+        <div class="portfolio-item">
+          <img src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=800&q=60" alt="Proyecto 1">
+          <h3>Identidad Visual</h3>
+        </div>
+        <div class="portfolio-item">
+          <img src="https://images.unsplash.com/photo-1580910051073-df056829f9c5?auto=format&fit=crop&w=800&q=60" alt="Proyecto 2">
+          <h3>Campaña Publicitaria</h3>
+        </div>
+        <div class="portfolio-item">
+          <img src="https://images.unsplash.com/photo-1603575448365-bb6e7b8cb066?auto=format&fit=crop&w=800&q=60" alt="Proyecto 3">
+          <h3>Diseño Social Media</h3>
+        </div>
+      </div>
     </section>
 
+    <!-- CONTACTO -->
     <section id="contact" class="card section-contact">
-      <h2>Contacto & redes</h2>
-      <p>Queremos escucharte. Contáctanos por nuestras redes sociales o visita nuestro repositorio:</p>
-      <p>
-        <a href="https://github.com/bvelasquezp-BrigitteKarolay" target="_blank">GitHub</a> | 
-        <a href="https://www.facebook.com/profile.php?id=61579628691857&locale=es_LA" target="_blank">Facebook</a>
-      </p>
+      <h2>Contáctanos</h2>
+      <p>Queremos escuchar tus ideas. Escríbenos y transformemos tu visión en diseño.</p>
+
+      <form id="formKaronix" action="#" method="post" novalidate>
+        <div class="form-grid">
+          <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required minlength="3">
+          <input type="email" id="correo" name="correo" placeholder="Correo electrónico" required>
+        </div>
+
+        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+
+        <div class="form-actions">
+          <label><input type="checkbox" required> Acepto los términos y condiciones</label>
+          <button type="submit" class="btn-primary">Enviar Mensaje</button>
+        </div>
+      </form>
+
+      <div class="social-icons">
+        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://wa.me/" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      </div>
     </section>
   </main>
 
-<!-- LABORATORIO 6 -->
-<!-- LABORATORIO 7 -->
- 
-<section id="lab7-contact" class="card section-contact">
-  <h2>Contacto KARONIX</h2>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2025 KARONIX • Todos los derechos reservados</p>
+  </footer>
 
-  <form id="formKaronix" action="#" method="post" novalidate>
-    <fieldset>
-      <legend>Datos personales</legend>
-
-      <label for="nombre">Nombre completo</label>
-      <input type="text" id="nombre" name="nombre" placeholder="Ej. Nombre Apellido" required minlength="3">
-
-      <label for="correo">Correo electrónico</label>
-      <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
-    </fieldset>
-
-    <fieldset>
-      <legend>Mensaje</legend>
-
-      <label for="mensaje">Mensaje</label>
-      <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje..." required minlength="5"></textarea>
-
-      <label for="opcion">Tipo</label>
-      <select id="opcion" name="opcion">
-        <option value="consulta">Consulta</option>
-        <option value="sugerencia">Sugerencia</option>
-        <option value="otro">Otro</option>
-      </select>
-    </fieldset>
-
-    <div class="form-actions">
-      <div class="terms">
-        <input type="checkbox" id="terminos" name="terminos" required>
-        <label for="terminos">Acepto los términos y condiciones</label>
-      </div>
-
-      <div class="buttons">
-        <button type="submit" class="btn">Enviar</button>
-        <button type="reset" class="btn btn-secondary">Limpiar</button>
-      </div>
-    </div>
-  </form>
-
-  <p id="mensajeConfirmacion" class="confirm" hidden>Gracias, tu mensaje fue recibido. Te responderemos pronto.</p>
-</section>
-
-<script>
-document.getElementById('formKaronix').addEventListener('submit', function(e){
-  e.preventDefault();
-  if(!this.checkValidity()){
-    this.reportValidity();
-    return;
-  }
-  document.getElementById('mensajeConfirmacion').hidden = false;
-  setTimeout(()=> {
-    document.getElementById('mensajeConfirmacion').hidden = true;
+  <script>
+  document.getElementById('formKaronix').addEventListener('submit', function(e){
+    e.preventDefault();
+    if(!this.checkValidity()){
+      this.reportValidity();
+      return;
+    }
+    alert("¡Gracias por tu mensaje! Te responderemos pronto.");
     this.reset();
-  }, 2200);
-});
-</script>
+  });
+  </script>
+</body>
+</html>
+
