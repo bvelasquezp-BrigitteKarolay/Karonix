@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KARONIX – Portafolio</title>
+  <meta name="description" content="Portafolio de proyectos KARONIX: branding, diseño web y campañas visuales." />
+
+
+  <!-- Fuentes / Iconos -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="/static/css/main.css">
+  <link rel="stylesheet" href="/static/css/layout.css">
+  <link rel="stylesheet" href="/static/css/forms.css">
+
+  <style>
+    .portfolio-grid img { cursor: pointer; transition: transform .25s ease; }
+    .portfolio-grid img:hover { transform: scale(1.03); }
+  
+    .lightbox {
+      position: fixed; inset: 0; display: none; align-items:center; justify-content:center;
+      background: rgba(0,0,0,.75); z-index: 9999;
+    }
+    .lightbox img { max-width: 95%; max-height: 85%; border-radius: 8px; box-shadow: 0 10px 40px rgba(0,0,0,.6);}
+    .lightbox.open { display:flex; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="brand">
+        <img src="https://raw.githubusercontent.com/bvelasquezp-BrigitteKarolay/Karonix/main/KARONIX.png" alt="KARONIX logo" class="logo-small">
+        <span class="brand-name">KARONIX</span>
+      </a>
+
+      <nav class="nav-main" aria-label="Navegación principal">
+        <ul>
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/nosotros">Nosotros</a></li>
+          <li><a href="/servicios">Servicios</a></li>
+          <li><a href="/portafolio" class="active">Portafolio</a></li>
+          <li><a href="/contacto">Contacto</a></li>
+          <li><a href="/admin">Admin</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="card container">
+      <h1>Portafolio</h1>
+      <p class="lead">Proyectos seleccionados: branding, campañas visuales y sitios web. Haz clic en las imágenes para ver en detalle.</p>
+
+      <div class="portfolio-grid">
+        <div class="portfolio-item">
+          <img src="https://raw.githubusercontent.com/bvelasquezp-BrigitteKarolay/Karonix/main/IMAGEN%201.png" alt="Branding Creativo" data-title="Branding Creativo">
+          <h3>Branding Creativo</h3>
+          <p>Identidad visual para marca boutique.</p>
+        </div>
+
+        <div class="portfolio-item">
+          <img src="https://raw.githubusercontent.com/bvelasquezp-BrigitteKarolay/Karonix/main/IMAGEN%202.png" alt="Diseño Minimalista" data-title="Diseño Minimalista">
+          <h3>Diseño Minimalista</h3>
+          <p>Campaña y material para redes.</p>
+        </div>
+
+        <div class="portfolio-item">
+          <img src="https://raw.githubusercontent.com/bvelasquezp-BrigitteKarolay/Karonix/main/IMAGEN%203.png" alt="Rediseño Corporativo" data-title="Rediseño Corporativo">
+          <h3>Rediseño Corporativo</h3>
+          <p>Actualización de identidad y aplicaciones.</p>
+        </div>
+
+        <div class="portfolio-item">
+          <img src="https://raw.githubusercontent.com/bvelasquezp-BrigitteKarolay/Karonix/main/IMAGEN%204.png" alt="Campañas Visuales" data-title="Campañas Visuales">
+          <h3>Campañas Visuales</h3>
+          <p>Concepto visual para temporada promocional.</p>
+        </div>
+
+        <div class="portfolio-item">
+          <img src="https://raw.githubusercontent.com/bvelasquezp-BrigitteKarolay/Karonix/main/IMAGEN%205.png" alt="Identidad Digital" data-title="Identidad Digital">
+          <h3>Identidad Digital</h3>
+          <p>Paquete completo para presencia online.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 KARONIX • Creatividad & Tecnología • Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <script src="/static/js/menu.js" defer></script>
+  <script src="/static/js/effects.js" defer></script>
+  <script>
+ 
+    function openLightbox(src, alt) {
+      const lb = document.getElementById('lightbox');
+      const img = document.getElementById('lightbox-img');
+      img.src = src;
+      img.alt = alt || '';
+      lb.classList.add('open');
+      lb.setAttribute('aria-hidden', 'false');
+    }
+    function closeLightbox() {
+      const lb = document.getElementById('lightbox');
+      lb.classList.remove('open');
+      lb.setAttribute('aria-hidden', 'true');
+      document.getElementById('lightbox-img').src = '';
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.portfolio-grid img').forEach(img => {
+        img.addEventListener('click', (e) => {
+          openLightbox(e.currentTarget.src, e.currentTarget.getAttribute('data-title'));
+        });
+      });
+
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>KARONIX | Creatividad & Tecnología</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FUENTES -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- ICONOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/layout.css">
+
+    <!-- JS -->
+    <script src="/static/js/menu.js" defer></script>
+    <script src="/static/js/effects.js" defer></script>
+</head>
+
+<body>
+
+<header class="hero">
+    <div class="hero-left">
+        <img src="https://raw.githubusercontent.com/bvelasquezp-BrigitteKarolay/Karonix/main/KARONIX.png" alt="Logo KARONIX">
+    </div>
+
+    <div class="hero-right">
+        <h1 class="brand-name">KARONIX</h1>
+        <p class="slogan">Creatividad & Tecnología</p>
+        <p class="intro">
+            Diseñamos experiencias digitales elegantes, funcionales y con identidad.
+        </p>
+        <a href="/contacto" class="btn-primary">Contáctanos</a>
+    </div>
+</header>
+
+<nav class="nav-main">
+    <ul>
+        <li><a href="/" class="active">Inicio</a></li>
+        <li><a href="/nosotros">Nosotros</a></li>
+        <li><a href="/servicios">Servicios</a></li>
+        <li><a href="/portafolio">Portafolio</a></li>
+        <li><a href="/contacto">Contacto</a></li>
+        <li><a href="/admin">Admin</a></li>
+    </ul>
+</nav>
+
+<main>
+
+<section class="card">
+    <h2>¿Quiénes Somos?</h2>
+    <p>
+    En <strong>KARONIX</strong> nos apasiona fusionar creatividad, innovación tecnológica y estrategia de marca para construir identidades visuales sólidas, coherentes y memorables. Nuestro enfoque va más allá del diseño: analizamos cada detalle de la experiencia del usuario, las tendencias del mercado y la esencia de cada negocio para crear soluciones que conecten emocionalmente con su público objetivo. Cada proyecto que emprendemos es tratado con precisión, creatividad y pasión, garantizando que cada marca que diseñamos no solo destaque, sino que transmita confianza, profesionalismo y modernidad. En <strong>KARONIX</strong>, transformamos ideas en experiencias visuales únicas, combinando estética, funcionalidad y estrategia para que cada marca deje una impresión duradera y significativa en su audiencia.
+</p>
+
+</section>
+
+<section class="card section-services">
+    <h2>Servicios Destacados</h2>
+
+    <div class="service-list">
+        <div class="service-item">
+            <i class="fa-solid fa-pen-nib"></i>
+            <h3>Branding</h3>
+            <p>Identidad visual profesional y coherente.</p>
+        </div>
+
+        <div class="service-item">
+            <i class="fa-solid fa-laptop-code"></i>
+            <h3>Diseño Web</h3>
+            <p>Sitios modernos, responsivos y optimizados.</p>
+        </div>
+
+        <div class="service-item">
+            <i class="fa-solid fa-bullhorn"></i>
+            <h3>Publicidad Digital</h3>
+            <p>Estrategias visuales para redes y campañas.</p>
+        </div>
+    </div>
+</section>
+
+   <!-- SECCION REDES SOCIALES -->
+    <section id="social-media" class="card redes">
+      <h2>Conecta con Nosotros</h2>
+      <p>Síguenos y descubre más de nuestro trabajo:</p>
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank" class="icon facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com" target="_blank" class="icon instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://tiktok.com" target="_blank" class="icon tiktok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://wa.me/51900000000" target="_blank" class="icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </section>
+  </main>
+  <script>
+    // VALIDACION DE FORMULARIO
+    document.getElementById('formKaronix').addEventListener('submit', function(e){
+      e.preventDefault();
+      if(!this.checkValidity()){
+        this.reportValidity();
+        return;
+      }
+      alert("Gracias por contactarte con KARONIX. Te responderemos pronto.");
+      this.reset();
+    });
+  </script>
+
+
+</main>
+
+<footer class="footer">
+    <p>© 2025 KARONIX • Todos los derechos reservados</p>
+</footer>
+
+</body>
+</html>

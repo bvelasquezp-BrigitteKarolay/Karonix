@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacto | KARONIX</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/forms.css">
+
+    <!-- JS -->
+    <script src="/static/js/form.js" defer></script>
+</head>
+
+<body>
+
+<header class="site-header">
+    <nav class="nav-main">
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/contacto" class="active">Contacto</a></li>
+            <li><a href="/admin">Admin</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- SECCION CONTACTO -->
+    <section id="contact" class="card section-contact">
+      <h2>Contáctanos</h2>
+      <p>Déjanos tu mensaje y juntos crearemos algo increíble.</p>
+
+      <form id="formKaronix" action="#" method="post" novalidate>
+        <div class="form-grid">
+          <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required minlength="3">
+          <input type="email" id="correo" name="correo" placeholder="Correo electrónico" required>
+        </div>
+
+        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+
+        <div class="form-actions">
+          <label><input type="checkbox" required> Acepto los términos y condiciones</label>
+          <button type="submit" class="btn-primary">Enviar Mensaje</button>
+        </div>
+      </form>
+    </section>
+
+
+<footer class="footer">
+    <p>© KARONIX</p>
+</footer>
+
+</body>
+</html>
